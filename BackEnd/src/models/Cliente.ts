@@ -11,7 +11,6 @@ export class Cliente extends Model {
     public celular!: string;
     public direccion!: string;
     public fechaNacimiento!: string;
-    public genero!: string;
 }
 
 interface ClienteI {
@@ -22,7 +21,6 @@ interface ClienteI {
      celular: string;
      direccion: string;
      fechaNacimiento: string;
-     genero: string;
 }
 
 Cliente.init(
@@ -56,11 +54,6 @@ Cliente.init(
         type: DataTypes.DATE,
         allowNull: false
         },
-
-genero: {
-    type: DataTypes.ENUM('Masculino', 'Femenino', 'Prefierono decirlo'),
-    allowNull: false
-    },
 
 direccion: {
     type: DataTypes.STRING,
